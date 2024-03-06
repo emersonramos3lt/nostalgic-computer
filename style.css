@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Courier Prime", monospace;
+    color: #00FF00;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 1px solid #00FF00;
+    position: fixed;
+    height: 6rem;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00FF00;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-top: 11rem;
+    max-width: 700px;
+    margin: auto;
+    transition: all .8s;
+}
+
+.cursor {
+    color: #00FF00;
+    animation: blink 1.2s infinite;
+}
+
+#typewriter {
+    color: #00FF00;
+}
+
+.c-indicator {
+    animation: scroll 1ms ease-in-out;
+    animation-timeline: scroll();
+    background-color: #00FF00;
+    transform-origin: left;
+    height: 0.5rem;
+    inset: 0;
+    position: fixed;
+    z-index: 2;
+    top: 6rem;
+}
+
+@keyframes scroll {
+    from {scale: 0 1;}
+    to { scale: 1 1;}
+}
+  
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 550px) {
+    main {
+        max-width: 350px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+}
